@@ -37,3 +37,11 @@ compute_logbf_rss_rcpp <- function(n, XtY, V, Vinv, w0, S0, precomp_quants_list,
     .Call('_mr_mashr_compute_logbf_rss_rcpp', PACKAGE = 'mr.mashr', n, XtY, V, Vinv, w0, S0, precomp_quants_list, standardize, eps, nthreads)
 }
 
+update_map_coordinate_rcpp <- function(B, w0, v, XX, XX_diag, XY, YY, n, S0) {
+    .Call(`_mr_mash_rssx_update_map_coordinate_rcpp`, B, w0, v, XX, XX_diag, XY, YY, n, S0)
+}
+
+update_map_block_rcpp <- function(block_theta, B_block_start, Sj_block_start, KL_block_start, XR_block_start, XX_block, XX_block_diag, v, S0, w0) {
+    .Call(`_mr_mash_rssx_update_map_block_rcpp`, block_theta, B_block_start, Sj_block_start, KL_block_start, XR_block_start, XX_block, XX_block_diag, v, S0, w0)
+}
+
