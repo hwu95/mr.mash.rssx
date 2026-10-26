@@ -182,6 +182,46 @@ BEGIN_RCPP
 END_RCPP
 }
 
+// update_map_coordinate_rcpp
+List update_map_coordinate_rcpp(const arma::mat& B, const arma::vec& w0, const arma::vec& v, const List& XX, const arma::mat& XX_diag, const arma::mat& XY, const arma::vec& YY, const arma::vec& n, const arma::cube& S0);
+RcppExport SEXP _mr_mash_rssx_update_map_coordinate_rcpp(SEXP BSEXP, SEXP w0SEXP, SEXP vSEXP, SEXP XXSEXP, SEXP XX_diagSEXP, SEXP XYSEXP, SEXP YYSEXP, SEXP nSEXP, SEXP S0SEXP) {
+BEGIN_RCPP
+    Rcpp::RObject rcpp_result_gen;
+    Rcpp::RNGScope rcpp_rngScope_gen;
+    Rcpp::traits::input_parameter< const arma::mat& >::type B(BSEXP);
+    Rcpp::traits::input_parameter< const arma::vec& >::type w0(w0SEXP);
+    Rcpp::traits::input_parameter< const arma::vec& >::type v(vSEXP);
+    Rcpp::traits::input_parameter< const List& >::type XX(XXSEXP);
+    Rcpp::traits::input_parameter< const arma::mat& >::type XX_diag(XX_diagSEXP);
+    Rcpp::traits::input_parameter< const arma::mat& >::type XY(XYSEXP);
+    Rcpp::traits::input_parameter< const arma::vec& >::type YY(YYSEXP);
+    Rcpp::traits::input_parameter< const arma::vec& >::type n(nSEXP);
+    Rcpp::traits::input_parameter< const arma::cube& >::type S0(S0SEXP);
+    rcpp_result_gen = Rcpp::wrap(update_map_coordinate_rcpp(B, w0, v, XX, XX_diag, XY, YY, n, S0));
+    return rcpp_result_gen;
+END_RCPP
+}
+// update_map_block_rcpp
+List update_map_block_rcpp(const arma::vec& block_theta, const arma::mat& B_block_start, const arma::cube& Sj_block_start, const arma::vec& KL_block_start, const arma::mat& XR_block_start, const arma::cube& XX_block, const arma::mat& XX_block_diag, const arma::vec& v, const arma::cube& S0, const arma::vec& w0);
+RcppExport SEXP _mr_mash_rssx_update_map_block_rcpp(SEXP block_thetaSEXP, SEXP B_block_startSEXP, SEXP Sj_block_startSEXP, SEXP KL_block_startSEXP, SEXP XR_block_startSEXP, SEXP XX_blockSEXP, SEXP XX_block_diagSEXP, SEXP vSEXP, SEXP S0SEXP, SEXP w0SEXP) {
+BEGIN_RCPP
+    Rcpp::RObject rcpp_result_gen;
+    Rcpp::RNGScope rcpp_rngScope_gen;
+    Rcpp::traits::input_parameter< const arma::vec& >::type block_theta(block_thetaSEXP);
+    Rcpp::traits::input_parameter< const arma::mat& >::type B_block_start(B_block_startSEXP);
+    Rcpp::traits::input_parameter< const arma::cube& >::type Sj_block_start(Sj_block_startSEXP);
+    Rcpp::traits::input_parameter< const arma::vec& >::type KL_block_start(KL_block_startSEXP);
+    Rcpp::traits::input_parameter< const arma::mat& >::type XR_block_start(XR_block_startSEXP);
+    Rcpp::traits::input_parameter< const arma::cube& >::type XX_block(XX_blockSEXP);
+    Rcpp::traits::input_parameter< const arma::mat& >::type XX_block_diag(XX_block_diagSEXP);
+    Rcpp::traits::input_parameter< const arma::vec& >::type v(vSEXP);
+    Rcpp::traits::input_parameter< const arma::cube& >::type S0(S0SEXP);
+    Rcpp::traits::input_parameter< const arma::vec& >::type w0(w0SEXP);
+    rcpp_result_gen = Rcpp::wrap(update_map_block_rcpp(block_theta, B_block_start, Sj_block_start, KL_block_start, XR_block_start, XX_block, XX_block_diag, v, S0, w0));
+    return rcpp_result_gen;
+END_RCPP
+}
+
 static const R_CallMethodDef CallEntries[] = {
     {"_mr_mashr_inner_loop_general_rcpp", (DL_FUNC) &_mr_mashr_inner_loop_general_rcpp, 14},
     {"_mr_mashr_impute_missing_Y_rcpp", (DL_FUNC) &_mr_mashr_impute_missing_Y_rcpp, 5},
@@ -192,6 +232,8 @@ static const R_CallMethodDef CallEntries[] = {
     {"_mr_mashr_rescale_post_mean_covar_rcpp", (DL_FUNC) &_mr_mashr_rescale_post_mean_covar_rcpp, 3},
     {"_mr_mashr_compute_logbf_rcpp", (DL_FUNC) &_mr_mashr_compute_logbf_rcpp, 10},
     {"_mr_mashr_compute_logbf_rss_rcpp", (DL_FUNC) &_mr_mashr_compute_logbf_rss_rcpp, 10},
+    {"_mr_mash_rssx_update_map_coordinate_rcpp", (DL_FUNC) &_mr_mash_rssx_update_map_coordinate_rcpp, 9},
+    {"_mr_mash_rssx_update_map_block_rcpp", (DL_FUNC) &_mr_mash_rssx_update_map_block_rcpp, 10},
     {NULL, NULL, 0}
 };
 
