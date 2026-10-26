@@ -1,4 +1,4 @@
-# mr.mashr
+# mr.mash.rssx
 
 [![Continuous Integration](https://github.com/stephenslab/mr.mashr/actions/workflows/ci.yml/badge.svg)](https://github.com/stephenslab/mr.mashr/actions/workflows/ci.yml)
 
