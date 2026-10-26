@@ -10,7 +10,7 @@ with adaptive shrinkage priors (mr.mash).
 Install and load the package using [remotes][remotes]:
 
 ```R
-remotes::install_github("stephenslab/mr.mashr")
+remotes::install_github("hwu95/mr.mash.rssx")
 library(mr.mashr)
 ```
 
