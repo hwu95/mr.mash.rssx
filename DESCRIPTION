@@ -1,6 +1,6 @@
 Encoding: UTF-8
 Type: Package
-Package: mr.mashr
+Package: mr.mash.rssx
 Version: 0.3.44
 Date: 2025-12-21
 Title: Multiple Regression with Multivariate Adaptive Shrinkage
